@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+$Roboto: 'Roboto', sans-serif;
+
+//Colores
+
+$negro: rgb(44, 44, 42);
+$blanco: rgb(255,255,255);
+$primario: rgb(221, 173, 189);
+$fondo: rgb(255, 251, 251);
+
+//Espacios
+
+$espacio-md: 16px;
+$espacio-lg: 32px;
+
+// Altura
+
+$alto: 200px;
+
+//mixin
+
+@mixin breakpoint($minimo) {
+    @if $minimo == md {
+        @media (min-width: 920px) {
+            @content
+        }
+    }
+    
+}
+
