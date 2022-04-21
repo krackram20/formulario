@@ -51,7 +51,7 @@ const Formulario = () => {
             placeholder="Nombre"
             value={Info.nombre}
             title ="Nombre completo"
-            pattern="([a-zA-Z]+\s)([a-zA-Z]+)"
+            pattern="[^()/><\][\\\x22,;|]+"
             required
           />
         </div>
@@ -70,11 +70,11 @@ const Formulario = () => {
           <input onChange={manejarCambio}
             type="tel"
             name="celular"
-            placeholder="Celular xxx-xxx-xxxx"
+            placeholder="Celular"
             value={Info.celular}
             required
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-            title= "El patron debe ser: XXX-XXX-XXXX"
+            pattern="[0-9]{10}"
+            title= "Numero de 10 digitos"
           />
         </div>
         <div>
